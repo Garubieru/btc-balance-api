@@ -41,6 +41,8 @@ func getUtxoList(url string) []byte {
 
 func getBalance(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	params := mux.Vars(r)
 	url := fmt.Sprintf("https://blockbook-bitcoin.tronwallet.me/api/v2/utxo/%s", params["address"])
@@ -73,7 +75,7 @@ func main() {
 	router.HandleFunc("/balance/{address}", getBalance).Methods("GET")
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:3000"},
+		AllowedOrigins:   []string{"*"},
 		AllowCredentials: true,
 	})
 
