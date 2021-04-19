@@ -74,7 +74,7 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		port = ":8080"
+		port = "8080"
 	}
 
 	router.HandleFunc("/balance/{address}", getBalance).Methods("GET")
@@ -87,5 +87,5 @@ func main() {
 	handler := c.Handler(router)
 
 	log.Println("Listening on port ", port)
-	log.Fatal(http.ListenAndServe(port, handler))
+	log.Fatal(http.ListenAndServe(":"+port, handler))
 }
