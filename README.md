@@ -8,11 +8,8 @@ This API consumes blockbook's(https://blockbook-bitcoin.tronwallet.me/api/v2/utx
 
 ## How to run
 
-Git clone this project on:
-`$GOPATH/src/github.com`
-
-Install project dependencies:
-`go get -v ./src`
+Clone the project: 
+`git clone https://github.com/Garubieru/btc-balance-api.git`
 
 Build the application:
 `go build src/main.go`
