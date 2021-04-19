@@ -17,6 +17,6 @@ Build the application:
 Execute:
 `./main`
 
-At this time, you have a RESTful API server running at [http://localhost:8000](http://localhost:8000). It provides the following endpoints:
+At this time, you have a RESTful API server running at [http://localhost:8080](http://localhost:8080). It provides the following endpoints:
 
 - `GET /balance/{address}`: Returns the total confirmed and unconfirmed balances of a bitcoin address.
