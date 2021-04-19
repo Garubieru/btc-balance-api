@@ -4,7 +4,7 @@ An API made in golang that returns the total confirmed and unconfirmed balances 
 
 ## Methodology
 
-This API consumes blockbook's(https://blockbook-bitcoin.tronwallet.me/api/v2/utxo/) API to check each transaction's confirmations. Therefore, if transaction's confirmations is less than 2, the balance will be unconfirmed, otherwise will be the opposite. Finally, the API will return the total confirmed and unconfirmed balances.
+This API consumes blockbook's(https://blockbook-bitcoin.tronwallet.me/api/v2/utxo/{btc-address}) API to check each bitcoin transaction's confirmations. Therefore, if transaction's confirmations is less than 2, the balance will be unconfirmed, otherwise will be the opposite. Finally, the API will return the total confirmed and unconfirmed balances.
 
 ## How to run
 
