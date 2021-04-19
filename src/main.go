@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
@@ -70,7 +71,11 @@ func getBalance(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := mux.NewRouter()
-	port := ":8000"
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = ":8080"
+	}
 
 	router.HandleFunc("/balance/{address}", getBalance).Methods("GET")
 
