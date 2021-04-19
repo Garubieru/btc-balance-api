@@ -48,12 +48,13 @@ func getBalance(w http.ResponseWriter, r *http.Request) {
 
 	var transactions = new(Transactions)
 
+	var totalBalance TotalBalance
+
 	err := json.Unmarshal(body, &transactions)
 	if err != nil {
-		log.Fatalln(err)
+		json.NewEncoder(w).Encode(totalBalance)
+		return
 	}
-
-	var totalBalance TotalBalance
 
 	for _, transaction := range *transactions {
 		if transaction.Confirmations < 2 {
