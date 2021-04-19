@@ -1,6 +1,7 @@
 # Bitcoin Balance Api
 
 An API made in golang that returns the total confirmed and unconfirmed balances to a bitcoin address based on UTXO list.
+You can check the application on heroku: (https://btc-balance-api.herokuapp.com/)
 
 ## Methodology
 
