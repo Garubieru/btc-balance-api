@@ -22,4 +22,4 @@ Execute:
 
 At this time, you have a RESTful API server running at [http://localhost:8000](http://localhost:8000). It provides the following endpoints:
 
-* `GET /balance/{address}`: Returns the total confirmed and uncofirmed balances of a bitcoin address.
+- `GET /balance/{address}`: Returns the total confirmed and unconfirmed balances of a bitcoin address.
